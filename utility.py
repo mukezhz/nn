@@ -4,16 +4,10 @@ from math import exp
 def take_input():
     print("Enter x1: default=0 0 1 1")
     temp = input()
-    if len(temp) != 4:
-        x1 = [0,0,1,1]
-    else:
-        x1 = [int(x) for x in temp.split()]
+    x1 = [0,0,1,1] if len(temp) != 4 else [int(x) for x in temp.split()]
     print("Enter x2: default=0 1 0 1: ")
     temp = input()
-    if len(temp) != 4:
-        x2 = [0,1,0,1]
-    else:
-        x2 = [int(x) for x in temp.split()]
+    x2 = [0,1,0,1] if len(temp) != 4 else [int(x) for x in temp.split()]
     print("Enter 1 for AND", "Enter 2 for OR", "Enter 3 for XOR", "Enter 4 for XNOR", "Enter 5 for NOR", "Enter 6 for NAND", "*********************","Default = AND", sep="\n")
     print("Enter y: ", end='')
     temp = input()
@@ -25,11 +19,7 @@ def take_input():
             "5": [1,0,0,0],
             "6": [1,1,1,0]
             }
-    if temp in options and len(temp) == 1:
-        yd = options[temp]
-    else:
-        yd = [0,0,0,1]
-
+    yd = options[temp] if temp in options and len(temp) == 1 else [0,0,0,1]
     return (x1[:], x2[:], yd[:])
 
 def display(x1, x2, yd):
@@ -48,18 +38,10 @@ def init():
         w1 = input("Enter weight 1 [default=0.1]: ")
         w2 = input("Enter weight 2 [default=0.2]: ")
         try:
-            if th == '':
-                th = 1.0
-            if lr == '':
-                lr = 0.4
-            if w1 == '':
-                w1 = 0.1
-            if w2 == '':
-                w2 = 0.2
-            th = float(th)
-            lr = float(lr)
-            w1 = float(w1)
-            w2 = float(w2)
+            th = 1.0 if th == '' else float(th)
+            lr = 0.4 if lr == '' else float(lr) 
+            w1 = 0.1 if w1 == '' else float(w1)
+            w2 = 0.2 if w2 == '' else float(w2)
         except:
             print("Please enter the number only")
         else: 
@@ -70,6 +52,7 @@ def init():
 def calc(x1, w1, x2, w2, th):
     return x1*w1 + x2*w2 - th
 # Depending upon function
+
 # Unit step
 def step(v):
     if v >= 0:

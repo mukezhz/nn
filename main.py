@@ -27,14 +27,10 @@ def nn(x1, x2, yd):
             print(f"fn(val): fn({val:.3})\tyo: {yo:.3}\t\terr: {err:.3}")
             print()
             if ceil(err) == 0 or it==5:
-                if it == 5:
-                    print("End of iteration")
-                else:
-                    print(f"No need to check ERROR")
+                print("End of iteration") if it == 5 else print(f"No need to check ERROR")
                 break
             else:
                 it += 1
                 w1, w2 = update_weight(x1[i], w1, x2[i], w2, err, lr)
-
 
 nn(x1, x2, yd)
