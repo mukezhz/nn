@@ -55,9 +55,7 @@ def calc(x1, w1, x2, w2, th):
 
 # Unit step
 def step(v):
-    if v >= 0:
-        return 1
-    return 0
+    return 1 if v >= 0 else 0
 # Signum
 def signum(v):
     return 1 / ( 1 + exp(-v) )
@@ -65,10 +63,8 @@ def signum(v):
 def activation():
     print("Select the funtion:","1 for unit step function[DEFAULT]", "2 for signum function", sep="\n")
     fn = input("Enter value: ")
-    if fn == '' or fn=='1':
-        return step
-    if fn == '2':
-        return signum
+    if fn == '' or fn=='1': return step
+    if fn == '2': return signum
 
 # compare with desired output
 def err_calc(yo, yd):
