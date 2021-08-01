@@ -49,7 +49,7 @@ def init():
     return w1, w2, th, lr
 
 # activation
-def calc(x1, w1, x2, w2, th):
+def sum_weight(x1, w1, x2, w2, th):
     return x1*w1 + x2*w2 - th
 # Depending upon function
 

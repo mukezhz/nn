@@ -1,5 +1,5 @@
 from math import ceil
-from utility import take_input, display, init, calc, step, signum, err_calc, update_weight, activation
+from utility import take_input, display, init, sum_weight, step, signum, err_calc, update_weight, activation
 
 """
 x1  x2  yd
@@ -19,7 +19,7 @@ def nn(x1, x2, yd):
         it = 1
         print("**********"*6)
         while True:
-            val = calc(x1[i], w1, x2[i], w2, th)
+            val = sum_weight(x1[i], w1, x2[i], w2, th)
             yo = float(fn(val))
             err = err_calc(yo, yd[i])
             print(f"x1: {x1[i]}\tx2: {x2[i]}\tyd: {yd[i]}\tyo: {yo:.3}")
