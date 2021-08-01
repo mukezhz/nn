@@ -48,55 +48,77 @@ Enter value: 2
 ************************************************************
 x1: 0   x2: 0   yd: 0   yo: 0.269
 Iteration: 1    w1: 0.1 w2:0.2
-fn(val): fn(-1.0)       yo: 0.269               err: -0.269
+signum(val): signum(-1.0)       yo: 0.269               err: -0.269
 
 No need to check ERROR
 ************************************************************
 x1: 0   x2: 1   yd: 0   yo: 0.31
 Iteration: 1    w1: 0.1 w2:0.2
-fn(val): fn(-0.8)       yo: 0.31                err: -0.31
+signum(val): signum(-0.8)       yo: 0.31                err: -0.31
 
 No need to check ERROR
 ************************************************************
 x1: 1   x2: 0   yd: 0   yo: 0.289
 Iteration: 1    w1: 0.1 w2:0.2
-fn(val): fn(-0.9)       yo: 0.289               err: -0.289
+signum(val): signum(-0.9)       yo: 0.289               err: -0.289
 
 No need to check ERROR
 ************************************************************
 x1: 1   x2: 1   yd: 1   yo: 0.332
 Iteration: 1    w1: 0.1 w2:0.2
-fn(val): fn(-0.7)       yo: 0.332               err: 0.668
+signum(val): signum(-0.7)       yo: 0.332               err: 0.668
 
 w1 = 0.1 + 0.4 * 0.668 * 1       = 0.367
 w2 = 0.2 + 0.4 * 0.668 * 1       = 0.467
 
 x1: 1   x2: 1   yd: 1   yo: 0.459
 Iteration: 2    w1: 0.367       w2:0.467
-fn(val): fn(-0.165)     yo: 0.459               err: 0.541
+signum(val): signum(-0.165)     yo: 0.459               err: 0.541
 
 w1 = 0.367 + 0.4 * 0.541 * 1     = 0.584
 w2 = 0.467 + 0.4 * 0.541 * 1     = 0.684
 
 x1: 1   x2: 1   yd: 1   yo: 0.566
 Iteration: 3    w1: 0.584       w2:0.684
-fn(val): fn(0.268)      yo: 0.566               err: 0.434
+signum(val): signum(0.268)      yo: 0.566               err: 0.434
 
 w1 = 0.584 + 0.4 * 0.434 * 1     = 0.757
 w2 = 0.684 + 0.4 * 0.434 * 1     = 0.857
 
 x1: 1   x2: 1   yd: 1   yo: 0.649
 Iteration: 4    w1: 0.757       w2:0.857
-fn(val): fn(0.614)      yo: 0.649               err: 0.351
+signum(val): signum(0.614)      yo: 0.649               err: 0.351
 
 w1 = 0.757 + 0.4 * 0.351 * 1     = 0.898
 w2 = 0.857 + 0.4 * 0.351 * 1     = 0.998
 
 x1: 1   x2: 1   yd: 1   yo: 0.71
 Iteration: 5    w1: 0.898       w2:0.998
-fn(val): fn(0.895)      yo: 0.71                err: 0.29
+signum(val): signum(0.895)      yo: 0.71                err: 0.29
 
 End of iteration
+Want to check with final weights?([y]/n)
+************************************************************
+Checking with w1: 0.898 w2: 0.998
+x1: 0   x2: 0   yd: 0   yo: 0.269
+signum(val): signum(-1.0)       yo: 0.269               err: -0.269
+
+************************************************************
+Checking with w1: 0.898 w2: 0.998
+x1: 0   x2: 1   yd: 0   yo: 0.499
+signum(val): signum(-0.00239)   yo: 0.499               err: -0.499
+
+************************************************************
+Checking with w1: 0.898 w2: 0.998
+x1: 1   x2: 0   yd: 0   yo: 0.474
+signum(val): signum(-0.102)     yo: 0.474               err: -0.474
+
+************************************************************
+Checking with w1: 0.898 w2: 0.998
+x1: 1   x2: 1   yd: 1   yo: 0.71
+signum(val): signum(0.895)      yo: 0.71                err: 0.29
+
+Thank you!!!
 ```
 
 ### Thank you
